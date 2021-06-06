@@ -35,7 +35,8 @@ jobs:
       - name: Test
         run: node_modules/node-qunit-phantomjs/bin/node-qunit-phantomjs test.html 
       - name: Build
-        run: mkdir -p public
+        run: |
+          mkdir -p public
           cp index.html public/index.html
           cp plateValidation.js public/plateValidation.js
       - uses: actions/upload-artifact@v2
