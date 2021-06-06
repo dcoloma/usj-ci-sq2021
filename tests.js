@@ -25,8 +25,6 @@ test("Numbers", function (assert) {
 test("Length", function (assert) {
     assert.equal(isValidPlate("734NMC"), false, "LESS 7 CHARACTERS(ONE LESS NUMBER)");
     assert.equal(isValidPlate("212MSDF"), false, "LESS 7 CHARACTERS(ONE LESS CHARACTER)");
-    assert.equal(isValidPlate("52354NLA"),false, "MORE 7 CHARACTERS(ONE MORE NUMBER)");
-    assert.equal(isValidPlate("9544KLMB"),false, "MORE 7 CHARACTERS(ONE MORE CHARACTER)");
 });
 
 test("Other", function (assert) {
