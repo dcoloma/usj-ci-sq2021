@@ -30,10 +30,11 @@ jobs:
         uses: actions/setup-node@v1
         with: 
            node-version: 10.x
-           run: | 
-             npm install --save-dev node-qunit-phantomjs
-             npm install --save-dev qunit
-             npm i eslint@5.16.0
+      - name: Install Dependencies
+        run: | 
+          npm install --save-dev node-qunit-phantomjs
+          npm install --save-dev qunit
+          npm i eslint@5.16.0
       - name: Test
         run: node_modules/node-qunit-phantomjs/bin/node-qunit-phantomjs test.html 
       - name: Lint
